@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Theatrum.Mobile.UI.Views.SimpleMvvmExamplePage"
+             Title="Simple MVVM">
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <Button Text="Set status" 
+                    Command="{Binding SetStatusCommand}" 
+                    Margin="6"/>
+
+            <ListView ItemsSource="{Binding Cars}"
+                      HasUnevenRows="True">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <StackLayout Orientation="Vertical" 
+                                         Margin="8">
+
+                                <Label Text="{Binding Name}" 
+                                       FontAttributes="Bold" />
+
+                                <StackLayout Orientation="Horizontal">
+                                    
+                                    <Label Text="Seen?" 
+                                           VerticalOptions="Center"/>
+                                    
+                                    <CheckBox IsChecked="{Binding Seen}"
+                                              Margin="8,0,0,0" 
+                                              VerticalOptions="Center" 
+                                              IsEnabled="False" />
+                                </StackLayout>
+
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
