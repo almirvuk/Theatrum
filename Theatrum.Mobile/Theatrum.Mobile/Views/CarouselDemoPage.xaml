@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Theatrum.Mobile.UI.Views.CarouselDemoPage"
+             Title="Carousel View">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="{Binding CurrentItem.Name}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+
+            <CarouselView ItemsSource="{Binding Cars}"
+                          CurrentItem="{Binding CurrentItem}" >
+
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image HeightRequest="250"
+                               Source="{Binding PhotoUrl}" />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+                
+            </CarouselView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

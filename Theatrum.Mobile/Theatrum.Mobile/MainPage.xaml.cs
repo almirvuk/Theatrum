@@ -16,5 +16,10 @@ namespace Theatrum.Mobile.UI
         {
             Navigation.PushAsync(new SimpleMvvmExamplePage());
         }
+
+        private void CarouselViewExample(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CarouselDemoPage());
+        }
     }
 }

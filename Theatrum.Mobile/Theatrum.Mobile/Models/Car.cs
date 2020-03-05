@@ -18,5 +18,13 @@ namespace Theatrum.Mobile.UI.Models
 			get { return seen; }
 			set { SetProperty(ref seen, value); }
 		}
+
+		private string photoUrl;
+		public string PhotoUrl
+		{
+			get { return photoUrl; }
+			set { SetProperty(ref photoUrl, value); }
+		}
+
 	}
 }

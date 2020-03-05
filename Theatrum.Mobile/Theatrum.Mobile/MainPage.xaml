@@ -8,7 +8,10 @@
 
         <Button Text="MVVM List example" 
                 Clicked="MvvmExample"/>
-    
+
+        <Button Text="Carousel View example" 
+                Clicked="CarouselViewExample"/>
+
     </StackLayout>
 
 </ContentPage>
